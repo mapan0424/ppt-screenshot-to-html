@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PPT Slide</title>
+  <style>
+    :root {
+      --primary-orange: #f05a1a;
+      --hot-orange: #ff5a10;
+      --deep-orange: #f03b12;
+      --text-main: #080c12;
+      --text-body: #2b2e35;
+      --text-sub: #4d5157;
+      --border-orange: rgba(240, 90, 26, 0.36);
+      --border-soft: rgba(166, 170, 178, 0.44);
+    }
+
+    * { box-sizing: border-box; }
+
+    html,
+    body {
+      margin: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      background: #eef0f3;
+      font-family: "Microsoft YaHei", "PingFang SC", "Noto Sans CJK SC", "Source Han Sans SC", Arial, sans-serif;
+    }
+
+    .viewport {
+      position: fixed;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    .slide-frame {
+      position: relative;
+      flex: 0 0 auto;
+      width: min(100vw, calc(100vh * 16 / 9));
+      aspect-ratio: 16 / 9;
+      max-height: 100vh;
+      overflow: visible;
+      background: #fff;
+    }
+
+    .slide {
+      position: relative;
+      width: 1600px;
+      height: 900px;
+      overflow: hidden;
+      background-image: url("./assets/slide-bg.png");
+      background-size: 1600px 900px;
+      background-position: center;
+      background-repeat: no-repeat;
+      transform-origin: left top;
+    }
+
+    .content-layer {
+      position: absolute;
+      inset: 0;
+      z-index: 2;
+    }
+
+    .page-title {
+      position: absolute;
+      left: 105px;
+      top: 70px;
+      margin: 0;
+      color: var(--text-main);
+      font-size: 52px;
+      font-weight: 800;
+      line-height: 1.15;
+      letter-spacing: 0;
+      white-space: nowrap;
+    }
+
+    .icon-sprite {
+      position: absolute;
+      width: 0;
+      height: 0;
+      overflow: hidden;
+    }
+  </style>
+</head>
+<body>
+  <div class="viewport">
+    <div class="slide-frame" id="slideFrame">
+      <main class="slide" id="slide">
+        <div class="content-layer">
+          <h1 class="page-title">页面标题</h1>
+          <!-- Reconstruct page-specific content here. -->
+        </div>
+      </main>
+    </div>
+  </div>
+
+  <script>
+    (function () {
+      const frame = document.getElementById("slideFrame");
+      const slide = document.getElementById("slide");
+      const W = 1600;
+      const H = 900;
+
+      function fit() {
+        const rect = frame.getBoundingClientRect();
+        const scale = Math.min(rect.width / W, rect.height / H);
+        slide.style.transform = "scale(" + scale + ")";
+      }
+
+      window.addEventListener("resize", fit);
+      fit();
+    })();
+  </script>
+</body>
+</html>

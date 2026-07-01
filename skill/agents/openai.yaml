@@ -1,0 +1,4 @@
+interface:
+  display_name: "PPT 截图高保真 HTML"
+  short_description: "将 PPT 页面截图复刻为固定画布的高保真静态 HTML"
+  default_prompt: "Use $ppt-screenshot-to-html to reproduce this PPT screenshot as a high-fidelity static HTML page using the provided base image."

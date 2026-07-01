@@ -1,0 +1,29 @@
+.DS_Store
+Thumbs.db
+
+# Local working files
+work/
+tmp/
+temp/
+*.log
+
+# Private source material that should not be published
+*.ppt
+*.pptx
+*.key
+*.pdf
+*.zip
+*.rar
+*.7z
+
+# Generated screenshots and review artifacts
+*.diff.png
+*.actual.png
+*.expected.png
+playwright-report/
+test-results/
+
+# Dependency folders
+node_modules/
+.venv/
+venv/
