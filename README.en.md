@@ -87,4 +87,4 @@ Use synthetic examples only. See `PRIVACY.md` before adding sample assets.
 
 ## License
 
-MIT License. See `LICENSE`.
+Apache License 2.0. See `LICENSE`.
