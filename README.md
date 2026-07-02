@@ -6,6 +6,10 @@
 
 [English](README.en.md)
 
+## 工作流程
+
+![PPT 截图到高保真 HTML 的重建流程](docs/workflow.png)
+
 ## 能做什么
 
 - 将 PPT 页面截图复刻为自包含的静态 HTML 页面。
@@ -36,6 +40,8 @@
 │       └── high-fidelity-guide.md
 ├── examples/
 │   └── README.md
+├── docs/
+│   └── workflow.png
 ├── CONTRIBUTING.md
 ├── PRIVACY.md
 ├── RELEASE_CHECKLIST.md

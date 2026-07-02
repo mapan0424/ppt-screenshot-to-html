@@ -6,6 +6,10 @@
 
 This is a Codex skill. It treats HTML as a programmable PPT canvas: a fixed `1600 x 900` slide, a reusable master/background image, and editable HTML/CSS/SVG content layers.
 
+## Workflow
+
+![PPT screenshot to high-fidelity HTML workflow](docs/workflow.png)
+
 ## What It Does
 
 - Rebuilds PPT slide screenshots as self-contained static HTML.
@@ -36,6 +40,8 @@ This is a Codex skill. It treats HTML as a programmable PPT canvas: a fixed `160
 │       └── high-fidelity-guide.md
 ├── examples/
 │   └── README.md
+├── docs/
+│   └── workflow.png
 ├── CONTRIBUTING.md
 ├── PRIVACY.md
 ├── RELEASE_CHECKLIST.md
